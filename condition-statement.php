@@ -12,34 +12,41 @@ function checkuserEligibilityToVote()
     } 
 }
 // checkuserEligibilityToVote();
-$marks=70;
-if($marks>=80)
+function studentgrade()
 {
-    $grade=" A";
+    $marks=70;
+    if($marks>=80)
+    {
+        $grade=" A";
+    }
+    elseif($marks>=75)
+    {
+        $grade=" A-";
+    }
+    elseif($marks>=65)
+    {
+        $grade=" B+";
+    }
+    elseif($marks>=60)
+    {
+        $grade=" B";
+    }
+    elseif($marks>=55)
+    {
+        $grade=" B-";
+    }
+    elseif ($marks>=50) 
+    {
+        $grade=" C+";
+    }
+    else
+    {
+        $grade="fail";
+    }
+    echo "Your score is" .$grade;
 }
-elseif($marks>=75)
-{
-    $grade=" A-";
-}
-elseif($marks>=65)
-{
-    $grade=" B+";
-}
-elseif($marks>=60)
-{
-    $grade=" B";
-}
-elseif($marks>=55)
-{
-    $grade=" B-";
-}
-elseif ($marks>=50) 
-{
-    $grade=" C+";
-}
-else
-{
-    $grade="fail";
-}
-echo "Your score is" .$grade;
+studentgrade();
+
+
+
 ?>
